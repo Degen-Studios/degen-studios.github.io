@@ -18,6 +18,18 @@
   </head>
   <body>
     <div id="header">
+      <div id="title">
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <hr />
+      </div>
+    </div><!-- end header -->
+    <div class="wrapper">
+      <section>
+        {{ content }}
+      </section>
+    </div>
+    <div id="footer">
       <nav>
         <ul>
           <li class="fork"><a href="https://degenpov.me" target="_blank">Degen POV</a></li>
@@ -28,18 +40,6 @@
           {% endif %}
         </ul>
       </nav>
-    </div><!-- end header -->
-    <div class="wrapper">
-      <section>
-        <div id="title">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <hr />
-        </div>
-        {{ content }}
-      </section>
-    </div>
-    <div id="footer">
       <hr>
       Copyright &copy; 2024 Degen Studios LLC.
     </div>
