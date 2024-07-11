@@ -10,19 +10,55 @@ body {
   overflow: hidden;
 }
 
-.placeholder {
+.background {
   position: fixed;
-  top: 0;
+  top: -10vh;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url("../images/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+.social-links {
+  position: fixed;
+  bottom: 25vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+
+  a {
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
+      transition: fill 0.3s ease;
+    }
+
+    &:hover svg {
+      fill: $text-color;
+    }
+  }
+
+  .x-twitter {
+    svg {
+      transition: fill 0.3s ease;
+    }
+
+    .twitter-logo {
+      display: none;
+    }
+
+    &:hover {
+      .x-logo {
+        display: none;
+      }
+      .twitter-logo {
+        display: block;
+      }
+    }
   }
 }
