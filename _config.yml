@@ -1,7 +1,5 @@
 title: Degen Studios
 description: We're all degens here.
-show_downloads: false
-google_analytics:
 theme: jekyll-theme-midnight
 github:
   is_project_page: false
