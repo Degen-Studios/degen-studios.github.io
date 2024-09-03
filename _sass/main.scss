@@ -61,4 +61,41 @@ body {
       }
     }
   }
+  .project-links {
+    position: fixed;
+    bottom: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      li {
+        display: inline;
+        
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 1.2em;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: $text-color;
+          }
+        }
+  
+        &:not(:last-child)::after {
+          content: "\25A1"; // Unicode for white square
+          color: white;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
 }
