@@ -22,9 +22,50 @@ body {
   background-size: contain;
 }
 
+.project-links {
+  position: fixed;
+  bottom: 39vh; // Increased to move above social links
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 80%; // Set a width to prevent wrapping
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; // Prevent wrapping
+
+    li {
+      display: inline-block;
+      white-space: nowrap; // Prevent individual items from wrapping
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $text-color;
+        }
+      }
+
+      &:not(:last-child)::after {
+        content: "\25FC";
+        color: white;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
 .social-links {
   position: fixed;
-  bottom: 25vh;
+  bottom: 30vh; // Decreased to move below project links
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -58,43 +99,6 @@ body {
       }
       .twitter-logo {
         display: block;
-      }
-    }
-  }
-  .project-links {
-    position: fixed;
-    bottom: 15vh;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  
-      li {
-        display: inline;
-        
-        a {
-          color: white;
-          text-decoration: none;
-          font-size: 1.2em;
-          transition: color 0.3s ease;
-  
-          &:hover {
-            color: $text-color;
-          }
-        }
-  
-        &:not(:last-child)::after {
-          content: "\25A1"; // Unicode for white square
-          color: white;
-          margin: 0 10px;
-        }
       }
     }
   }
