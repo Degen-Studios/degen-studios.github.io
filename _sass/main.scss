@@ -47,6 +47,16 @@ body {
   text-align: center;
 }
 
+.token-item a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.token-item a:hover {
+  color: $hover-color;
+}
+
 .token-icon {
   width: 100%;
   height: auto;
@@ -60,15 +70,20 @@ body {
 }
 
 .token-name {
-  margin-top: 15px;
+  display: block;
+  margin-top: 10px;
   font-size: 1.1em;
   text-align: center;
+}
+
+.token-item:hover .token-name {
+  color: $hover-color;
 }
 
 .vague-link {
   position: relative;
   z-index: 10;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .vague-link a {
